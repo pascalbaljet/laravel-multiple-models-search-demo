@@ -1,6 +1,7 @@
 ## Laravel Multiple Models Search Demo
 
 [Live Stream 28 October 14:00 CET](https://www.youtube.com/watch?v=WigAaQsPgSA)
+[Package used in this stream](https://github.com/protonemedia/laravel-cross-eloquent-search)
 
 <img src="https://raw.githubusercontent.com/pascalbaljet/laravel-multiple-models-search-demo/main/screenshot.png" />
 
