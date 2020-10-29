@@ -14,12 +14,14 @@ class SearchController
     {
         $term = $request->query('term');
 
-        $results = Search::add(Video::published()->withCount('comments'), 'name', 'published_at')
+        $results = Search::new()
+            ->add(Video::published()->withCount('comments'), 'name', 'published_at')
             ->add(Post::published()->withCount('comments'), 'title', 'published_at')
             ->add(Book::withCount('comments'), ['title', 'description'], 'released_at')
             ->orderByDesc()
             ->paginate(10)
             ->startWithWildcard()
+            ->allowEmptySearchQuery()
             ->get($term);
 
         return view('search', [
